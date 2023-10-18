@@ -1,14 +1,14 @@
 //SPDX-License-Identifier:MIT
 
-pragma solidity ^0.8.4;
+pragma solidity 0.8.9;
 
 //CodeHawks First Flight #1: PasswordStore 
 
 contract PasswordStore {
     error PasswordStore__NotOwner();
 
-    address private s_owner;
-    string private s_password;
+    address public s_owner;
+    string public s_password;
 
     event SetNetPassword();
 
