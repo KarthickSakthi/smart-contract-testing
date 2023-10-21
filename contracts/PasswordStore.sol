@@ -7,8 +7,8 @@ pragma solidity 0.8.9;
 contract PasswordStore {
     error PasswordStore__NotOwner();
 
-    address public s_owner;
-    string public s_password;
+    address private s_owner;
+    string private s_password;
 
     event SetNetPassword();
 
