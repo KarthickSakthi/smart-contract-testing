@@ -19,7 +19,6 @@ async function main() {
   await lock.waitForDeployment();
 
   const signer = await hre.ethers.getSigners();
-  console.log("signerAddress", signer[0].address)
 
   console.log(
     `Lock with ${ethers.formatEther(
