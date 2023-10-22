@@ -28,7 +28,7 @@ describe("Password Store Contract should store and return a Password by only own
 
   it("3. Should not set a password by an other than Owner", async function () {
     let notOwner = signers[1];
-    await expect(await passwordStorage.connect(notOwner).setPassword(password)).to.be.revertedWithCustomError(
+    await expect(passwordStorage.connect(notOwner).setPassword(password)).to.be.revertedWithCustomError(
       passwordStorage,
       "PasswordStore__NotOwner"
     );
